@@ -1,26 +1,21 @@
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js';
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./assets/css/animate.min.css";
+import "./assets/css/color.css";
+import "./assets/css/responsive.css";
+import "./assets/css/style.css";
+// import './assets/js/bootstrap.min.js';
+// import './assets/js/html5lightbox.js';
+// import './assets/js/jquery-3.3.1.min.js';
+// import './assets/js/modernizr-3.6.0.min.js';
+import Routes from './routes';
+
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return (<Routes/>);
 }
 
 export default App;
