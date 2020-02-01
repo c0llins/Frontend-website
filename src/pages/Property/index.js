@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import PropertyMap from "../../componets/mapbox/Property";
+import phJv from "../../assets/images/jv.jpg";
 import Navbar from "../../componets/Navbar";
 import Search from "../../componets/Search";
 import api from "../../services/api";
@@ -154,7 +154,7 @@ export default function Property(props) {
                     </h3>
 
                     <div class="contct-info">
-                      <img src="https://via.placeholder.com/81x74" alt="" />
+                      <img src={phJv} width="81px" alt="" />
                       <div class="contct-nf">
                         <h3>
                           {!data.proprietary ? (
@@ -165,42 +165,47 @@ export default function Property(props) {
                         </h3>
                         <h4>Douglas and Eleman Agency</h4>
                         <span>
-                          <i class="la la-phone"></i>+1 212-925-3797
+                          <i class="la la-phone"></i>
+                          {!data.proprietary ? (
+                            <div>Loading...</div>
+                          ) : (
+                            data.proprietary.contact.phone
+                          )}
                         </span>
                       </div>
                     </div>
 
-                    <div class="post-comment-sec">
+                    <div className="post-comment-sec">
                       <form>
-                        <div class="form-field">
+                        <div className="form-field">
                           <input
                             type="text"
                             name="name"
-                            placeholder="Your Name"
+                            placeholder="Seu Nome"
                           />
                         </div>
-                        <div class="form-field">
+                        <div className="form-field">
                           <input
                             type="text"
                             name="email"
-                            placeholder="Your Email"
+                            placeholder="Seu Email"
                           />
                         </div>
-                        <div class="form-field">
+                        <div className="form-field">
                           <input
                             type="text"
                             name="phone"
-                            placeholder="Your Phone"
+                            placeholder="Seu Telefone"
                           />
                         </div>
-                        <div class="form-field">
+                        <div className="form-field">
                           <textarea
                             name="message"
-                            placeholder="Your Message"
+                            placeholder="Sua Mensagem"
                           ></textarea>
                         </div>
-                        <button type="submit" class="btn2">
-                          Contact
+                        <button type="submit" className="btn2">
+                          Enviar
                         </button>
                       </form>
                     </div>

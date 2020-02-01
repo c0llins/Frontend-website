@@ -1,6 +1,6 @@
 import React from "react";
 // import "../css/App.css";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.jpg";
 function Navbar() {
   return (
@@ -12,7 +12,7 @@ function Navbar() {
               <div className="header-address">
                 <a href="#a">
                   <i className="la la-phone-square"></i>
-                  <span>(67) 98823-1232</span>
+                  <span>+55 (67) 98823-1232</span>
                 </a>
                 <a href="#a">
                   <i className="la la-map-marker"></i>
@@ -28,7 +28,6 @@ function Navbar() {
                 <a href="http://instagram.com/medicasa.com.br">
                   <i className="fa fa-instagram"></i>
                 </a>
-               
               </div>
             </div>
           </div>
@@ -39,9 +38,10 @@ function Navbar() {
           <div className="row">
             <div className="col-xl-12">
               <nav className="navbar navbar-expand-lg navbar-light">
-                <a className="navbar-brand" href="01_Home.html">
+                <Link to="/" className="navbar-brand">
                   <img src={logo} alt="" />
-                </a>
+                </Link>
+
                 <button
                   className="menu-button"
                   type="button"
@@ -57,19 +57,26 @@ function Navbar() {
                 <div className="navbar-collapse" id="navbarSupportedContent">
                   <ul className="navbar-nav mr-auto">
                     <li className="nav-item dropdown">
-                      <Link to="/" className="nav-link">Inicio</Link>
+                      <Link to="/" className="nav-link">
+                        Ínicio
+                      </Link>
                     </li>
                     <li className="nav-item dropdown">
-                      <Link to="/contact" className="nav-link">Contato</Link>
+                      <Link to="/contact" className="nav-link">
+                        Contato
+                      </Link>
                     </li>
                   </ul>
                   <div className="d-inline my-2 my-lg-0">
                     <ul className="navbar-nav">
                       <li className="nav-item submit-btn">
-                        <a href="#a" className="my-2 my-sm-0 nav-link sbmt-btn">
+                        <Link
+                          to="/contact"
+                          className="my-2 my-sm-0 nav-link sbmt-btn"
+                        >
                           <i className="icon-plus"></i>
                           <span>Enviar minha casa</span>
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>

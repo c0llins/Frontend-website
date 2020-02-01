@@ -8,22 +8,22 @@ export default function Card(props) {
   return props.name ? (
     <div className="card">
       <Link to={`/property/${props.id}`}>
-        <div class="img-block">
-          <div class="overlay"></div>
+        <div className="img-block">
+          <div className="overlay"></div>
           <CardImage imgLink={props.imgLink} imgAlt={props.imgAlt}></CardImage>
-          <div class="rate-info">
+          <div className="rate-info">
             <CardPrice price={props.price} />
 
             <span>{props.type}</span>
           </div>
         </div>
       </Link>
-      <div class="card-body">
+      <div className="card-body">
         <Link to={`/property/${props.id}`}>
           <CardTitle name={props.name} />
 
           <p>
-            <i class="la la-map-marker">{props.location}</i>
+            <i className="la la-map-marker">{props.location}</i>
           </p>
         </Link>
         {props.info.map(item => {
@@ -36,15 +36,15 @@ export default function Card(props) {
           );
         })}
       </div>
-      <div class="card-footer">
-        <a href="#a" class="pull-left">
-          <i class="la la-arrow-circle-right"></i>
+      <div className="card-footer">
+        <a href="#a" className="pull-left">
+          <i className="la la-arrow-circle-right"></i>
         </a>
-        {/* <a href="#a" class="pull-right">
-          <i class="la la-calendar-check-o"></i>Há 2 dias
+        {/* <a href="#a" className="pull-right">
+          <i className="la la-calendar-check-o"></i>Há 2 dias
         </a> */}
       </div>
-      {/* <a href="#a" className="ext-link"></a> */}
+      {/* <a href="#a" classNameName="ext-link"></a> */}
     </div>
   ) : (
     /* <div className="tags are-medium">
