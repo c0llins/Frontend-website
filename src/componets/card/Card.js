@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import CardImage from "./CardImage";
 import CardPrice from "./CardPrice";
 import CardTitle from "./CardTitle";
@@ -7,7 +7,6 @@ import CardTitle from "./CardTitle";
 export default function Card(props) {
   return props.name ? (
     <div className="card">
-      
       <Link to={`/property/${props.id}`}>
         <div class="img-block">
           <div class="overlay"></div>
@@ -18,29 +17,24 @@ export default function Card(props) {
             <span>{props.type}</span>
           </div>
         </div>
-        </Link>
+      </Link>
       <div class="card-body">
-      <Link to="/property">
-       
+        <Link to={`/property/${props.id}`}>
           <CardTitle name={props.name} />
 
           <p>
             <i class="la la-map-marker">{props.location}</i>
           </p>
-          </Link>
-          { props.info.map(item => {
-                              return(
-                            <ul key={item.toString()}>
-                           
-                                <li>{item.bath} banheiros</li>
-                                <li>{item.beds} quartos</li>
-                                <li>{item.rooms} salas</li>
-                                
-                              
-                              
-                            </ul>
-                            )
-                            })}
+        </Link>
+        {props.info.map(item => {
+          return (
+            <ul key={item.toString()}>
+              <li>{item.bath} banheiros</li>
+              <li>{item.beds} quartos</li>
+              <li>{item.rooms} salas</li>
+            </ul>
+          );
+        })}
       </div>
       <div class="card-footer">
         <a href="#a" class="pull-left">
